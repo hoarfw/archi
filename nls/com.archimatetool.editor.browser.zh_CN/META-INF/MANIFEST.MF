@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chinese (Simplified) Language Pack
+Bundle-SymbolicName: com.archimatetool.editor.browser.zh_CN
+Bundle-Version: 5.8.0.qualifier
+Bundle-Vendor: Archi
+Fragment-Host: com.archimatetool.editor.browser
+Bundle-ClassPath: com.archimatetool.editor.browser.zh_CN.jar
+Automatic-Module-Name: com.archimatetool.editor.browser.zh_CN

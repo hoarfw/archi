@@ -52,4 +52,20 @@ OTHER DEALINGS IN THE SOFTWARE.
          id="org.eclipse.draw2d"
          version="0.0.0"/>
 
+   <plugin
+         id="org.eclipse.zest.core.zh_CN"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.zest.layouts.zh_CN"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.gef.zh_CN"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.draw2d.zh_CN"
+         version="0.0.0"/>
+
 </feature>

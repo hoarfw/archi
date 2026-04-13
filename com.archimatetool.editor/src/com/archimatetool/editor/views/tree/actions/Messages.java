@@ -52,6 +52,8 @@ public class Messages extends NLS {
     public static String SaveModelAction_1;
 
     public static String SortFolderAction_0;
+    
+    public static String SortModelViewAction_0;
 
     public static String TreeModelViewActionFactory_0;
 

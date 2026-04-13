@@ -181,6 +181,7 @@ public interface IPreferenceConstants {
     String GRID_SHOW_GUIDELINES = "gridShowGuidelines";
 
     String LINK_VIEW = "linkView";
+    String SORT_MODEL_VIEW = "sortModelView";
     String MRU_MAX = "mruMax";
 
     // Check for Archi update

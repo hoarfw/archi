@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>在模型树中搜索和过滤</title>
+<link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h2>在模型树中搜索和过滤</h2>
+<p>在模型上工作时，模型树中的对象数量可能会大幅增加。当然，您可能希望在主文件夹结构中添加子文件夹，以帮助组织这些对象。但是，在树中查找特定对象可能仍然很困难。</p>
+<p>为了搜索模型树， Archi中包含一个搜索栏。可以通过单击模型树窗口工具栏上的“搜索”按钮来访问。单击此按钮将显示搜索栏：</p>
+<img height="358" src="../Images/model-tree-searchbar.png" width="320"/>
+<p class="caption">单击此处打开搜索栏</p>
+<p>在搜索栏的文本字段中键入时，模型树将更新为仅显示与搜索栏中的搜索条件匹配的对象。默认情况下，只有对象的名称与搜索字符串匹配。您还可以通过在搜索栏的“过滤器选项”下拉菜单中选择对象的“文档”字段进行搜索：</p>
+<img height="554" src="../Images/model-tree-searchbar2.png" width="318"/>
+<p class="caption">在“名称”和“文档”上搜索</p>
+<p>要清除搜索文本，请单击文本右侧的图标。要清除这些筛选条件，请取消选择“名称”和/或“文档”。</p>
+<br/>
+<h3>筛选对象类型</h3>
+<p>要过滤某些类型的ArchiMate概念，您可以在下拉菜单中选择要包含在过滤器中的类型。您可以选择专业化认证、元素、关系和视图：</p>
+<img height="551" src="../Images/model-tree-filter.png" width="445"/>
+<p class="caption">筛选某些对象类型</p>
+<p>要重置对象类型筛选器，请选择“重置筛选器”菜单项。</p>
+<br/>
+<h3>过滤用户属性</h3>
+<p>您可以通过选择“属性值”下拉菜单项并在文本字段中添加一些文本来筛选用户属性的值。</p>
+<p>要根据所选用户属性进行筛选，请通过单击“属性...”菜单项选择要包含在筛选器中的属性键，然后在选择对话框中选择所需的属性键：</p>
+<img height="350" src="../Images/model-tree-filter2.png" width="598"/>
+<p class="caption">选择用户属性密钥</p>
+<br/>
+<h3>筛选专业化认证</h3>
+<p>要筛选概念的专业化认证，您可以在下拉菜单中选择要包含在筛选器中的专业化认证，其方式与对象类型相同。这将显示与所选专业化认证相匹配的所有概念。</p>
+<h3>所有文件夹</h3>
+<p>在优化搜索时，模型树将仅显示符合搜索/筛选条件的对象（如果没有匹配的对象，则完全没有）。因此，不显示没有匹配子对象的文件夹。但是，如果您希望在搜索对象时显示这些空文件夹（例如，您可能希望将对象拖放到其他文件夹） ，则可以通过选择“显示所有文件夹”将此选项设置为筛选器菜单中的选项。</p>
+<h3>区分大小写</h3>
+<p>选择此选项以匹配搜索文本上的大小写。</p>
+<h3>匹配正则表达式</h3>
+<p>选择此选项以使用正则表达式进行匹配。如果正则表达式无效，搜索文本将显示为红色。请注意，语法是基于Java的。</p>
+<h3>重置筛选条件</h3>
+<p>选择此菜单项将清除文档、属性、专长、元素、关系和视图的所有选择。</p>
+<h3>刷新</h3>
+<p>当模型发生外部更改时，选择此菜单项将刷新模型树。</p>
+<br/>
+<h3>查找和替换</h3>
+<p>还可以按名称查找和替换模型树中的对象。</p>
+<img height="347" src="../Images/find-replace-dialog.png" width="270"/>
+<p class="caption">“查找和替换”对话框</p>
+<p/>
+</body>
+</html>

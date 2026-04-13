@@ -40,6 +40,7 @@
         <module>com.archimatetool.jasperreports.commandline</module>
         <module>com.archimatetool.jdom</module>
         <module>com.archimatetool.model</module>
+        <module>com.archimatetool.mcp</module>
         <module>com.archimatetool.modelimporter</module>
         <module>com.archimatetool.modelimporter.commandline</module>
         <module>com.archimatetool.reports</module>
@@ -53,6 +54,7 @@
         <module>org.eclipse.zest.layouts</module>
         <module>org.opengroup.archimate.xmlexchange</module>
         <module>org.opengroup.archimate.xmlexchange.commandline</module>
+        <module>nls</module>
     </modules>
 
     <profiles>

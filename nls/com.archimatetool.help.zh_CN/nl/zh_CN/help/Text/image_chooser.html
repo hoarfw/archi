@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>将图像添加到对象</title>
+<link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h2>将图像添加到对象</h2>
+<p>ArchiMate 对象、备注、组、画布块、图像对象和置顶可以包含图像。当图像位置未设置为“填充”时 ，块和粘滞中的图像将调整为 100像素的最大宽度和高度。图像可以是任何大小 ，但我们建议您将它们保持在合理的小尺寸 ，以免消耗太多内存。</p>
+<p>要向其中一个对象添加图像，请打开“属性”窗口并选择对象。双击对象还将打开“属性”窗口。在“属性”窗口中找到“图像”选项卡，然后使用“图像选择...”按钮选择“图像选择器” ：</p>
+<img alt="image" height="109" src="../Images/image_chooser.png" width="200"/>
+<p class="caption">从“属性”窗口中选择图像选择器</p>
+<p>注意-要为 ArchiMate对象设置图像 ，您必须首先确保在图像源下拉列表中选择了 “自定义”。</p>
+<p>这将打开“我的图像”图像选择器对话框窗口：</p>
+<img alt="image" height="539" src="../Images/image_chooser_dialog.png" width="647"/>
+<p class="caption">“图像选择器”对话框窗口</p>
+<p>任何已加载模型中包含的所有图像都将显示在选择器中，以便您可以重复使用它们。如果要从计算机打开图像文件，请选择“从文件打开...”选项。</p>
+<br/>
+<p class="boxout"><img alt="tip" class="tipImage" height="40" src="../Images/tip.png" width="40"/>在画布视图中，您可以将图像文件从桌面拖放到画布。</p>
+<br/>
+<h3>支持的图像格式</h3>
+<p>支持的图像格式有PNG、 JPG、 JPEG、 GIF、 TIF、 TIFF、 BMP和 ICO。</p>
+<br/>
+<h3>从对象中删除图像</h3>
+<p>要从对象中删除图像，请从图像选择器中选择“删除图像”选项。</p>
+<br/>
+<p class="boxout"><img alt="tip" class="tipImage" height="40" src="../Images/tip.png" width="40"/><strong>添加图像时Archi对 “* .archimate”文件使用不同的文件格式。</strong><br/>通常， Archi会将 “* .archimate”文件保存为单纯文本 XML格式文件。但是 ，当使用图像时 ，使用的文件格式是包含模型的 XML文件和图像文件的二进制存档文件 （ ZIP格式 ）。这是为了将所有相关文件放在一起。</p>
+<p/>
+</body>
+</html>

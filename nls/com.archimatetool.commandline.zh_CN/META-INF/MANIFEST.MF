@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chinese (Simplified) Language Pack
+Bundle-SymbolicName: com.archimatetool.commandline.zh_CN
+Bundle-Version: 5.8.0.qualifier
+Bundle-Vendor: Archi
+Fragment-Host: com.archimatetool.commandline
+Bundle-ClassPath: com.archimatetool.commandline.zh_CN.jar
+Automatic-Module-Name: com.archimatetool.commandline.zh_CN

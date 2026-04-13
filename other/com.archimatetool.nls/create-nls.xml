@@ -10,16 +10,16 @@
     <!-- YOU MUST SET THE FOLLOWING PROPERTY VALUES -->
 
     <!-- The language code, such as fr, de, nl, ru -->
-    <property name="lang_code"       value="en" />
-        
+    <property name="lang_code"       value="zh_CN" />
+
     <!-- The version of the language pack -->
-    <property name="nls_version"     value="4.9.0" />
-        
+    <property name="nls_version"     value="5.8.0" />
+
     <!-- Language pack name like "German Language Pack" -->
-    <property name="bundle_name"     value="Your Language Pack Name" />
-        
+    <property name="bundle_name"     value="Chinese (Simplified) Language Pack" />
+
     <!-- Vendor name like "Acme Company", "Fred Bloggs", or "Acme University" -->
-    <property name="bundle_vendor"   value="Your Name" />
+    <property name="bundle_vendor"   value="Archi" />
 
     <target name="run">
 

@@ -16,6 +16,7 @@ import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
+import com.archimatetool.mcp.bootstrap.MCPServerBootstrap;
 import com.archimatetool.editor.perspectives.MainPerspective;
 import com.archimatetool.editor.preferences.IPreferenceConstants;
 import com.archimatetool.editor.utils.NetUtils;
@@ -91,6 +92,18 @@ extends WorkbenchAdvisor
     @Override
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         return new ArchiWorkbenchWindowAdvisor(configurer);
+    }
+    
+    @Override
+    public void postStartup() {
+        super.postStartup();
+        MCPServerBootstrap.start();
+    }
+    
+    @Override
+    public boolean preShutdown() {
+        MCPServerBootstrap.stop();
+        return super.preShutdown();
     }
 
 	@Override

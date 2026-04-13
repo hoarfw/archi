@@ -1,12 +1,12 @@
 bin/
 .settings/
-
+*.jar
 # Ignore Maven generated folders
 # Although it would be better to copy the source folders first and run Maven on the copy...
 # Which is what I do via an Ant script
 target/
 /workspace/
-
+.class
 # Maven generates these *.jar files in the project's root...
 com.archimatetool.canvas.jar
 com.archimatetool.editor.jar
@@ -19,3 +19,5 @@ com.archimatetool.reports.jar
 com.archimatetool.templates.jar
 com.archimatetool.widgets.jar
 com.archimatetool.zest.jar
+archi
+tmp

@@ -88,6 +88,7 @@ public class TreeModelViewer extends TreeViewer {
     private Object[] rootVisibleExpandedElements;
     
     private boolean useAlphanumericComparator = ArchiPlugin.getInstance().getPreferenceStore().getBoolean(IPreferenceConstants.TREE_ALPHANUMERIC_SORT);
+    private boolean useSortModelView = ArchiPlugin.getInstance().getPreferenceStore().getBoolean(IPreferenceConstants.SORT_MODEL_VIEW);
     
     /**
      * Listener for theme font change
@@ -138,6 +139,14 @@ public class TreeModelViewer extends TreeViewer {
                 if((e1 instanceof IFolder folder1 && e2 instanceof IFolder folder2) && (folder1.getType() != FolderType.USER 
                         || folder2.getType() != FolderType.USER)) {
                     return 0;
+                }
+
+                if(useSortModelView) {
+                    String type1 = e1.getClass().getSimpleName();
+                    String type2 = e2.getClass().getSimpleName();
+                    if(!type1.equals(type2)) {
+                        return getComparator().compare(type1, type2);
+                    }
                 }
                 
                 // Get rendered text or name
@@ -224,6 +233,11 @@ public class TreeModelViewer extends TreeViewer {
     
     void setUseAlphanumericComparator(boolean value) {
         useAlphanumericComparator = value;
+        refreshTreePreservingExpandedNodes();
+    }
+    
+    void setUseSortModelView(boolean value) {
+        useSortModelView = value;
         refreshTreePreservingExpandedNodes();
     }
     

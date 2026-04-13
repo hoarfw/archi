@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.archimatetool</groupId>
+        <artifactId>archi</artifactId>
+        <version>${revision}</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <artifactId>com.archimatetool.nls</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Archi Language Packs</name>
+
+    <modules>
+        <module>com.archimatetool.canvas.zh_CN</module>
+        <module>com.archimatetool.commandline.zh_CN</module>
+        <module>com.archimatetool.csv.zh_CN</module>
+        <module>com.archimatetool.csv.commandline.zh_CN</module>
+        <module>com.archimatetool.editor.zh_CN</module>
+        <module>com.archimatetool.editor.browser.zh_CN</module>
+        <module>com.archimatetool.export.svg.zh_CN</module>
+        <module>com.archimatetool.hammer.zh_CN</module>
+        <module>com.archimatetool.help.zh_CN</module>
+        <module>com.archimatetool.jasperreports.zh_CN</module>
+        <module>com.archimatetool.jasperreports.commandline.zh_CN</module>
+        <module>com.archimatetool.model.zh_CN</module>
+        <module>com.archimatetool.modelimporter.zh_CN</module>
+        <module>com.archimatetool.modelimporter.commandline.zh_CN</module>
+        <module>com.archimatetool.reports.zh_CN</module>
+        <module>com.archimatetool.reports.commandline.zh_CN</module>
+        <module>com.archimatetool.templates.zh_CN</module>
+        <module>com.archimatetool.zest.zh_CN</module>
+        <module>org.eclipse.draw2d.zh_CN</module>
+        <module>org.eclipse.gef.zh_CN</module>
+        <module>org.eclipse.zest.core.zh_CN</module>
+        <module>org.eclipse.zest.layouts.zh_CN</module>
+        <module>org.opengroup.archimate.xmlexchange.zh_CN</module>
+        <module>org.opengroup.archimate.xmlexchange.commandline.zh_CN</module>
+    </modules>
+</project>

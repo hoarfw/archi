@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>画布建模工具包-深入了解细节</title>
+<link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h2>深入了解详情</h2>
+<p>构成画布的主要组件和概念是块、粘滞、图像、连接、提示和锁定。画布模板通常由多个（锁定的）块和图像组成，用户可以在其上添加粘滞、图像、连接和其他块（如果需要）。以下各节将详细描述这些概念，首先介绍画布调色板以及构建虚拟画布的示例。</p>
+<p/>
+<h3>画布调色板</h3>
+<p>使用画布时， “调色板”为您提供创建这些对象所需的工具。</p>
+<img alt="canvas" height="211" src="../Images/canvas_palette.png" width="168"/>
+<p class="caption">画布调色板</p>
+<p>在调色板中选择一个工具并将其绘制到画布上。彩色方块代表“Stickies”。请注意 ， “粘性”您不限于提供的颜色 ，因为您可以在 <a href="properties_canvas_sticky.html">_基本概念必须具备操作型定义李白就象一个浪子</a>。与提供的连接类似，您可以更改连接的线条和箭头样式 <a href="properties_canvas_connection.html">_基本概念必须具备操作型定义李白就象一个浪子</a>.</p>
+<p/>
+<h3>构建新画布-示例</h3>
+<p>让我们完成基于映射过去、现在和未来概念构建自己的画布的过程。</p>
+<p>假设您在模型树中选择了一个模型，请执行以下步骤：</p>
+<ol>
+<li>右键单击模型树上模型的“视图”文件夹，然后选择“新建- &gt;空白画布” ：<br/>
+<br/>
+<img alt="canvas" height="551" src="../Images/canvas_new_blank.png" width="563"/><br/>
+<br/>
+</li>
+<li>空白画布视图将自动打开。如果您愿意，此时可以在模型树中重命名它。</li>
+<li>从调色板中选择块工具并在画布上绘制一个高大的矩形块。通过单击文本内容并将其更改为“过去”来编辑其文本内容：<br/>
+<br/>
+<img alt="canvas" height="619" src="../Images/canvas_example1.png" width="243"/><br/>
+<br/>
+</li>
+<li>创建另外两个名为“现在”和 “未来的块”将它们添加到画布中以便它们按如下方式排列 ：<br/>
+<br/>
+<img alt="canvas" height="611" src="../Images/canvas_example2.png" width="571"/><br/>
+<br/>
+</li>
+<li>现在，让我们为这些区块添加一些图标，使它们在视觉上更具吸引力。双击第一个块以打开“属性”窗口。在“属性”窗口中，选择“图像”选项卡。然后选择“选择...”下拉框和“设置图像...”项目：<br/>
+<br/>
+<img alt="canvas" height="271" src="../Images/canvas_example3.png" width="515"/><br/>
+<br/>
+        当“我的图像”图像管理器对话框打开时，选择“从文件打开...”选项，然后从计算机的文件系统中选择适当的图像。对其他区块执行相同的操作。<br/>
+<br/>
+</li>
+<li>以下是我们为三个区块选择的图片到目前为止的样子：<br/>
+<br/>
+<img alt="canvas" height="617" src="../Images/canvas_example4.png" width="572"/><br/>
+<br/>
+</li>
+<li>  现在我们已经构建了三个主要模块，我们可以借此机会更改它们的背景颜色、文本字体和在“属性”窗口中的位置。但现在，让我们在块下方添加一个图像。从“调色板”中选择“图像”工具，并在“块”下方的画布上绘制矩形图像占位符。双击图像占位符以打开“属性”窗口。在“主”选项卡的“属性”窗口中，选择“选择...”下拉列表框和“设置图像...”项，就像您之前为区块所做的那样，然后从计算机的文件系统中选择适当的图像。然后从“外观”选项卡将边框设置为“无”。画布现在如下所示：<br/>
+<br/>
+<img alt="canvas" height="669" src="../Images/canvas_example5.png" width="570"/><br/>
+<br/>
+</li>
+</ol>
+<p><strong>添加提示和锁定</strong></p>
+<p>对于最后的修饰，让我们向块添加一些提示 ，然后锁定它们 ，以便我们可以将画布重新用作模板。为什么要向区块添加提示 ，嗯 ，与 Archi模型中的其他对象一样 ，提供一个向最终用户建议对象意图以及如何在模型中使用的标题非常有用。让我们添加提示 ：</p>
+<ol>
+<li>首先，确保 <a href="hints.html">提示窗口</a> 已打开。您可以从主“窗口”菜单打开它。</li>
+<li>双击第一个区块（ “过去”区块）以打开“属性”窗口。</li>
+<li>在“属性”窗口中，选择“提示”选项卡。</li>
+<li>为提示标题键入“过去” ，并为提示内容键入一些文本。请注意 ，您可以使用 HTML标记内容文本。以下是现在的样子 ：<br/>
+<br/>
+<img alt="canvas" height="520" src="../Images/canvas_example6.png" width="700"/><br/>
+<br/>
+</li>
+<li>为其他区块添加提示。</li>
+<li>现在，让我们锁定所有这些对象，以便可以使用画布。依次选择每个块和图像。在“属性”窗口中，勾选“锁定”复选框：<br/>
+<br/>
+<img alt="canvas" height="213" src="../Images/canvas_example7.png" width="618"/><br/>
+</li>
+</ol>
+<p><br/> 
+      现在我们已经创建了块，添加了图像，提供了提示并锁定了对象，我们可以将整个内容保存为画布模板，然后从模板创建画布的新实例。请参阅章节"<a href="canvas_save_as_template.html">将画布另存为模板</a>"并",<a href="canvas_new_from_template.html">从模板创建新画布</a>为了做到这一点</p>
+<p>从模板创建新的画布实例意味着我们现在可以开始真正使用它：</p>
+<img alt="canvas" height="631" src="../Images/canvas_example8.png" width="561"/>
+<p class="caption">我们的想象画布</p>
+<p>有关更多想法，请查看如何构建内置画布模板以获取更多示例。请参阅“<a href="canvas_new_from_template.html">从模板创建新画布</a>".</p>
+<p/>
+<p class="boxout"><img alt="tip" class="tipImage" height="40" src="../Images/tip.png" width="40"/><strong>添加图像时Archi对 “* .archimate”文件使用不同的文件格式。</strong><br/>通常， Archi会将 “* .archimate”文件保存为单纯文本 XML格式文件。但是 ，当使用图像时 ，使用的文件格式是包含模型的 XML文件和图像文件的二进制存档文件 （ ZIP格式 ）。这是为了将所有相关文件放在一起。</p>
+<p/>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>将另一个模型导入当前模型</title>
+<link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1 class="pagebreak">将另一个模型导入当前模型</h1>
+<p>可以将另一个Archi模型导入并合并到当前选定的模型中。然后 ，阿奇您可以将导入的模型维护为参考模型，阿奇可以单独更新并根据需要重新导入。</p>
+<p>导入其他模型时需要考虑的一些事项：</p>
+<ul>
+<li>模型对象由其类型和标识符唯一引用。导入模型时，它们用于将导入的对象与目标对象匹配。</li>
+<li>导入时将替换对象的所有用户属性，此级别不会合并。</li>
+<li>如果更改或删除关系，导入的模型中的某些更改可能会影响视图中的连接。这些在导入后在状态对话框中报告。</li>
+<li>即使从导入的模型中删除了现有目标对象和文件夹，也不会删除它们。</li>
+</ul>
+<h2>导入另一个Archi模型</h2>
+<p>要将另一个Archi模型导入当前选定的模型 ，请从主文件菜单中选择 “将Archi模型导入当前选定的模型”。将出现以下对话框 ：</p>
+<img alt="import-model" height="378" src="../Images/importmodel-wizard.png" width="511"/>
+<p class="caption">导入另一个模型</p>
+<h3>导入选项</h3>
+<p><strong>更新现有对象和文件夹</strong><br/>
+    如果选中此选项，则导入时将更新任何现有目标对象和文件夹。</p>
+<p><strong>更新模型信息和顶级文件夹</strong><br/>
+    如果选择此选项，则如果模型节点（名称、文档、属性）有任何更改，这些更改将被更新。如果任何顶级文件夹（文档、属性）发生更改，这些也将被更新。</p>
+<p><strong>导入后显示状态对话框</strong><br/>
+    如果选择此选项，则在导入模型后会显示状态对话框。这将列出更新或更改的内容。</p>
+<p/>
+</body>
+</html>

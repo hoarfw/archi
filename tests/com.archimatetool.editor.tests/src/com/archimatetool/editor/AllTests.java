@@ -11,6 +11,7 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 
 import com.archimatetool.editor.actions.AllActionsTests;
 import com.archimatetool.editor.diagram.AllDiagramTests;
+import com.archimatetool.editor.mcp.AllMCPTests;
 import com.archimatetool.editor.model.AllModelTests;
 import com.archimatetool.editor.p2.AllP2Tests;
 import com.archimatetool.editor.propertysections.AllPropertySectionsTests;
@@ -21,6 +22,8 @@ import com.archimatetool.editor.views.AllViewsTests;
 
 @Suite
 @SelectClasses({
+    // mcp
+    AllMCPTests.class,
     // actions
     AllActionsTests.class,
     // diagram

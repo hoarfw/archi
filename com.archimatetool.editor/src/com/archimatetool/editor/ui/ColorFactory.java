@@ -34,11 +34,8 @@ import com.archimatetool.model.ILineObject;
  */
 public class ColorFactory {
     
-    /**
-     * Color Registry
-     * We need to check Display.getCurrent() because it can be null if running headless (tests, scripting, command line)
-     */
-    private static ColorRegistry ColorRegistry = new ColorRegistry(Display.getCurrent() != null ? Display.getCurrent() : Display.getDefault());
+    private static final Object COLOR_REGISTRY_LOCK = new Object();
+    private static ArchiColorRegistry colorRegistry;
     
     public static Color get(int red, int green, int blue) {
         return get(new RGB(red, green, blue));
@@ -53,15 +50,49 @@ public class ColorFactory {
         if(rgbValue == null) {
             return null;
         }
-        
-        if(!ColorRegistry.hasValueFor(rgbValue)) {
+
+        ColorRegistry registry = getColorRegistry();
+
+        if(!registry.hasValueFor(rgbValue)) {
             RGB rgb = convertStringToRGB(rgbValue);
             if(rgb != null) {
-                ColorRegistry.put(rgbValue, rgb);
+                registry.put(rgbValue, rgb);
             }
         }
-        
-        return ColorRegistry.get(rgbValue);
+
+        return registry.get(rgbValue);
+    }
+
+    /**
+     * Recreate the registry if an earlier test/workbench lifecycle disposed its Display.
+     */
+    private static ColorRegistry getColorRegistry() {
+        synchronized(COLOR_REGISTRY_LOCK) {
+            if(colorRegistry == null || colorRegistry.hasDisposedDisplay()) {
+                Display display = Display.getCurrent();
+                if(display == null || display.isDisposed()) {
+                    display = Display.getDefault();
+                }
+                if(display == null || display.isDisposed()) {
+                    throw new IllegalStateException("SWT display is not available for color registry");
+                }
+
+                colorRegistry = new ArchiColorRegistry(display);
+            }
+
+            return colorRegistry;
+        }
+    }
+
+    private static final class ArchiColorRegistry extends ColorRegistry {
+
+        private ArchiColorRegistry(Display display) {
+            super(display);
+        }
+
+        private boolean hasDisposedDisplay() {
+            return display == null || display.isDisposed();
+        }
     }
     
     /**

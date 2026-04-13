@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chinese (Simplified) Language Pack
+Bundle-SymbolicName: org.opengroup.archimate.xmlexchange.commandline.zh_CN
+Bundle-Version: 5.8.0.qualifier
+Bundle-Vendor: Archi
+Fragment-Host: org.opengroup.archimate.xmlexchange.commandline
+Bundle-ClassPath: org.opengroup.archimate.xmlexchange.commandline.zh_CN.jar
+Automatic-Module-Name: org.opengroup.archimate.xmlexchange.commandline.zh_CN

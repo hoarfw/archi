@@ -78,6 +78,7 @@ import com.archimatetool.editor.views.tree.actions.PasteAction;
 import com.archimatetool.editor.views.tree.actions.PropertiesAction;
 import com.archimatetool.editor.views.tree.actions.RenameAction;
 import com.archimatetool.editor.views.tree.actions.SaveModelAction;
+import com.archimatetool.editor.views.tree.actions.SortModelViewAction;
 import com.archimatetool.editor.views.tree.commands.DuplicateCommandHandler;
 import com.archimatetool.editor.views.tree.search.SearchWidget;
 import com.archimatetool.model.FolderType;
@@ -108,6 +109,7 @@ implements ITreeModelView, IUIRequestListener {
     private IAction fActionNewModel;
     private IAction fActionOpenModel;
     private IAction fActionLinkToEditor;
+    private IAction fActionSortModelView;
     private IAction fActionFindReplace;
     private IAction fActionCollapseSelected;
     private IAction fActionExpandSelected;
@@ -292,6 +294,7 @@ implements ITreeModelView, IUIRequestListener {
         fActionProperties = new PropertiesAction(getSelectionProvider());
         
         fActionLinkToEditor = new LinkToEditorAction();
+        fActionSortModelView = new SortModelViewAction();
         
         fActionDuplicate = new DuplicateAction(getViewer());
         
@@ -538,6 +541,7 @@ implements ITreeModelView, IUIRequestListener {
         
         manager.add(fActionToggleSearchField);
         manager.add(fActionLinkToEditor);
+        manager.add(fActionSortModelView);
     }
     
     /**
@@ -700,6 +704,10 @@ implements ITreeModelView, IUIRequestListener {
             case IPreferenceConstants.TREE_ALPHANUMERIC_SORT -> {
                 getViewer().setUseAlphanumericComparator((Boolean)event.getNewValue());
             }
+            
+            case IPreferenceConstants.SORT_MODEL_VIEW -> {
+                getViewer().setUseSortModelView((Boolean)event.getNewValue());
+            }
         }
 
         if(event.getProperty().startsWith(IPreferenceConstants.FOLDER_COLOUR_PREFIX)) {
@@ -774,6 +782,7 @@ implements ITreeModelView, IUIRequestListener {
         fActionCollapseSelected = null;
         fActionExpandSelected = null;
         fActionLinkToEditor = null;
+        fActionSortModelView = null;
         fActionOpenDiagram = null;
         fActionCloseModel = null;
         fActionSaveModel = null;

@@ -167,6 +167,7 @@ implements IPreferenceConstants {
         store.setDefault(GRID_SHOW_GUIDELINES, true);
 
         store.setDefault(LINK_VIEW, false);
+        store.setDefault(SORT_MODEL_VIEW, false);
         store.setDefault(MRU_MAX, 6);
 
         // Check for Archi update
